@@ -28,9 +28,15 @@ use {
 }
 ```
 
-### Simply as dependency of lualine
-
-See below in [Setup](#setup).
+## Configuration
+```lua
+require("nvim-tdd").setup({
+    keymaps = { -- See Usage below
+        next_step = "<leader>tdd",
+        end_tdd = "<leader>tde",
+    },
+})
+```
 
 ## Setup
 
@@ -53,12 +59,11 @@ return {
 
 | Keymap | Action |
 |--------|--------|
-| `<leader>tn` | *next*: Advance to the next TDD step |
-| `<leader>te` | *end*: Remove the displayed step     |
+| `<leader>tdd` | *next*: Advance to the next TDD step |
+| `<leader>tde` | *end*: Stop displaying the step     |
 
 ## Future Ideas
 
-- [ ] Configurable keymaps
 - [ ] Configurable text
 - [ ] Persistence when closing neovim
 - [ ] Integration with some testing framework
